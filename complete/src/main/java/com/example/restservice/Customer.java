@@ -1,8 +1,16 @@
 package com.example.restservice;
 
-public class Customer {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Customer {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private final long id;
+
 	private final String name;
 	private final String firstname;
 	private final String email;
